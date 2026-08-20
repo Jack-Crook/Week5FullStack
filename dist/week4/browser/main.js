@@ -44368,7 +44368,7 @@ var Login = class _Login {
       \u0275\u0275elementEnd()()();
       \u0275\u0275element(5, "br");
       \u0275\u0275elementStart(6, "div", 2)(7, "label", 3);
-      \u0275\u0275text(8, "Email address");
+      \u0275\u0275text(8, "Username");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "input", 4);
       \u0275\u0275twoWayListener("ngModelChange", function Login_Template_input_ngModelChange_9_listener($event) {
@@ -44414,7 +44414,7 @@ var Login = class _Login {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Login, [{
     type: Component,
-    args: [{ selector: "app-login", imports: [FormsModule], template: '<form (ngSubmit)="onSubmit()">\n<div><span style="font-size: 48px;"><label> Login </label></span>\n    </div>\n    <br>\n  <div class="mb-3">\n    <label for="exampleInputEmail1" class="form-label">Email address</label>\n    <input type="text" class="form-control" id="exampleInputEmail1" name="username" [(ngModel)]="username">\n  </div>\n  <div class="mb-3">\n    <label for="exampleInputPassword1" class="form-label">Password</label>\n    <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="password">\n  </div>\n  <div class="mb-3 form-check">\n    <input type="checkbox" class="form-check-input" id="exampleCheck1">\n    <label class="form-check-label" for="exampleCheck1">Check me out</label>\n  </div>\n  @if (error) {\n  <div class="alert alert-danger">{{error }}</div>\n}\n  <button type="submit" class="btn btn-primary">Submit</button>\n</form>' }]
+    args: [{ selector: "app-login", imports: [FormsModule], template: '<form (ngSubmit)="onSubmit()">\n<div><span style="font-size: 48px;"><label> Login </label></span>\n    </div>\n    <br>\n  <div class="mb-3">\n    <label for="exampleInputEmail1" class="form-label">Username</label>\n    <input type="text" class="form-control" id="exampleInputEmail1" name="username" [(ngModel)]="username">\n  </div>\n  <div class="mb-3">\n    <label for="exampleInputPassword1" class="form-label">Password</label>\n    <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="password">\n  </div>\n  <div class="mb-3 form-check">\n    <input type="checkbox" class="form-check-input" id="exampleCheck1">\n    <label class="form-check-label" for="exampleCheck1">Check me out</label>\n  </div>\n  @if (error) {\n  <div class="alert alert-danger">{{error }}</div>\n}\n  <button type="submit" class="btn btn-primary">Submit</button>\n</form>' }]
   }], () => [{ type: Router }, { type: Auth }], null);
 })();
 (() => {
@@ -44636,5 +44636,5 @@ var App = class _App {
 
 // src/main.ts
 bootstrapApplication(App, appConfig).catch((err) => console.error(err));
-//# debugId=07318280-238f-56fa-801a-a159dd68bdc3
+//# debugId=c27adc37-8ac6-56a0-8db1-9b88a711db99
 //# sourceMappingURL=main.js.map
