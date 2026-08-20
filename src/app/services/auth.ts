@@ -3,7 +3,8 @@ import { inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';  // lets this service make HTTP requests
 
 
-@Injectable({ providedIn: 'root' })export class Auth {
+@Injectable({ providedIn: 'root' })
+export class Auth {
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:3000';
 

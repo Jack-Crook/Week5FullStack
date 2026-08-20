@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Auth } from '../services/auth';
 
 @Component({
   selector: 'app-login',
@@ -9,28 +11,26 @@ import { Router } from '@angular/router';
   styleUrl: './login.css',
 })
 export class Login {
-  email = '';
+  username = '';          
   password = '';
-  error = '';
-  private users = [
-    { email: 'Jack', password: 'password123' },
-    { email: 'Lachlan', password: 'admin123' },
-  ];
+  error = '';             // matches the @if already in login.html
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private auth: Auth) {}
 
   onSubmit() {
-    const match = this.users.find(
-      (u) => u.email === this.email && u.password === this.password
-    );
-
-    if (match) {
-      this.error = '';
-      this.router.navigate(['/profile']);
-    } else {
-      this.error = 'Invalid email or password';
-    }
+    this.auth.login(this.username, this.password).subscribe({
+      next: (response) => {
+        if (???) {                   
+          this.error = '';
+          // ??? save the user
+          // ??? go to the profile page
+        } else {
+          this.error = 'Invalid username or password';
+        }
+      },
+      error: (err: HttpErrorResponse) => {
+        this.error = 'Could not reach the server.';
+      },
+    });
   }
 }
-
-
