@@ -1,11 +1,11 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Auth, User } from '../services/auth';
 
 @Component({
   selector: 'app-profile',
-  imports: [FormsModule],          // currently empty — [(ngModel)] won't compile without this
+  imports: [FormsModule],          // needed for [(ngModel)] in the template
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
@@ -16,13 +16,12 @@ export class Profile implements OnInit {
   constructor(private auth: Auth, private router: Router) {}
 
   ngOnInit() {
-    // load the logged-in user from storage into this.user
-    // this.user = ???
+    this.user = this.auth.getUser();      // load the logged-in user from storage
   }
 
   onSave() {
     if (!this.user) return;
-    // ??? write the edited user back to storage
+    this.auth.saveUser(this.user);        // write the edited details back to storage
     this.saved = 'Profile updated.';
   }
 }

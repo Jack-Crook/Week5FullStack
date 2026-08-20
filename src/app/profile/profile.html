@@ -7,8 +7,18 @@
       <input type="text" class="form-control" name="username" [(ngModel)]="user.username">
     </div>
 
-    <!-- ??? repeat for birthdate, age, and email -->
-    <!-- age is a number — which input type? -->
+    <div class="mb-3">
+      <label class="form-label">Birthdate</label>
+      <input type="text" class="form-control" name="birthdate" [(ngModel)]="user.birthdate">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Age</label>
+      <input type="number" class="form-control" name="age" [(ngModel)]="user.age">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="user.email">
+    </div>
 
     @if (saved) {
       <div class="alert alert-success">{{ saved }}</div>
