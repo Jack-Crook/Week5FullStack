@@ -1,37 +1,47 @@
 {
-  "hash": "11949d1a",
-  "configHash": "c09e252f",
+  "hash": "344a13f9",
+  "configHash": "9420c1f9",
   "lockfileHash": "1b7c7efd",
-  "browserHash": "9cfc5e60",
+  "browserHash": "3b2c3af3",
   "optimized": {
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "2b463bba",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "afbe151e",
+      "fileHash": "afbbcb63",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "a6c15e64",
+      "fileHash": "5d79751e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "4c391aa5",
+      "fileHash": "127a615c",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "0e019e01",
+      "fileHash": "bf0755d5",
       "needsInterop": false
     }
   },
   "chunks": {
-    "common-BTN62TCq": {
-      "file": "common-BTN62TCq.js",
+    "_platform_location-chunk-Cgr7CFzT": {
+      "file": "_platform_location-chunk-Cgr7CFzT.js",
+      "isDynamicEntry": false
+    },
+    "common-D_X3M1HL": {
+      "file": "common-D_X3M1HL.js",
       "isDynamicEntry": false
     },
     "core-BOi6uYdK": {
@@ -42,8 +52,12 @@
       "file": "createObject-iGUg9A2l.js",
       "isDynamicEntry": false
     },
-    "platform-browser-Cp7JIvvU": {
-      "file": "platform-browser-Cp7JIvvU.js",
+    "http-Q5pixCoY": {
+      "file": "http-Q5pixCoY.js",
+      "isDynamicEntry": false
+    },
+    "platform-browser-CIMx8ESc": {
+      "file": "platform-browser-CIMx8ESc.js",
       "isDynamicEntry": false
     }
   }

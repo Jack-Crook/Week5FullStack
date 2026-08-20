@@ -20,10 +20,11 @@ export class Login {
   onSubmit() {
     this.auth.login(this.username, this.password).subscribe({
       next: (response) => {
-        if (???) {                   
+        // a wrong password still arrives here as a 200, so check the flag
+        if (response.valid) {
           this.error = '';
-          // ??? save the user
-          // ??? go to the profile page
+          this.auth.saveUser(response);              // store the logged-in user (no password in it)
+          this.router.navigate(['/profile']);
         } else {
           this.error = 'Invalid username or password';
         }
